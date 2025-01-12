@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My Spotify Profile</title>
+    <script
+      src="https://kit.fontawesome.com/b8bb662d6b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="content">
+      <h1 id="title">Kaleidoscope Spotify Music Player</h1>
+      <div class="search-container">
+        <div class="search-bar">
+          <button class="search btn"><i class="fas fa-search"></i></button>
+          <input type="text" placeholder="Search Music, Artists, & Albums" />
+        </div>
+      </div>
+
+      <div class="player-container">
+        <div class="music-player">
+          <div class="album-art">
+            <img src="placeholder.jpg" alt="Album Art" />
+          </div>
+          <div class="song-details">
+            <h2>Song Title</h2>
+            <p>Artist Name</p>
+          </div>
+          <div class="controls">
+            <button id="random">
+              <i class="btn fas fa-random"></i>
+            </button>
+            <button id="backward">
+              <i class="btn fas fa-backward"></i>
+            </button>
+            <button id="pausePlay">
+              <i class="btn fas fa-play"></i>
+            </button>
+            <button id="forward">
+              <i class="btn fas fa-forward"></i>
+            </button>
+            <button id="replay">
+              <i class="btn fas fa-rotate-right"></i>
+              <!-- Fixed -->
+            </button>
+          </div>
+          <div class="timer-container">
+            <span id="elapsed-time">0:00</span>
+            <div class="progress-bar"></div>
+            <span id="end-time">4:20</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="src/main.js" type="module"></script>
+</html>
