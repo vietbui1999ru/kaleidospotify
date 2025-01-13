@@ -63,3 +63,13 @@ export async function fetchProfile(token) {
 
   return await result.json();
 }
+
+export async function fetchMusic(token) {
+  const result = await fetch("https://api.spotify.com/v1/tracks/0lvhEsN1zkMzfp2M1o17yy", {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${token}` },
+    });
+
+  return await result.json();
+}

@@ -2,6 +2,7 @@ import {
   redirectToAuthCodeFlow,
   getAccessToken,
   fetchProfile,
+  fetchMusic,
 } from "../auth/codeGenerator.js";
 
 export async function authenticate(clientId, code) {
@@ -9,9 +10,12 @@ export async function authenticate(clientId, code) {
     redirectToAuthCodeFlow(clientId);
   } else {
     const accessToken = await getAccessToken(clientId, code);
-    const profile = await fetchProfile(accessToken);
-    console.log(profile);
-    populateUI(profile);
+    // const profile = await fetchProfile(accessToken);
+    // console.log(profile);
+    // populateUI(profile);
+    const song = await fetchMusic(accessToken);
+    console.log(song);
+    populateMusicPlayer(song);
   }
 }
 
@@ -34,6 +38,9 @@ function populateUI(profile) {
   document.getElementById("url").setAttribute("href", profile.href);
 }
 
-function populateMusicPlayer(profile) {
-  const track = "https://api.spotify.com/v1/tracks/";
+function populateMusicPlayer(song) {
+  const songTitle = song.name;
+  const songArtist = song.artists[0].name;
+  const albumImg = song.album.images[0].url;
+  console.log("Title: ", songTitle, "\nArtist: ", songArtist, "\nImageUrl: ", albumImg)
 }

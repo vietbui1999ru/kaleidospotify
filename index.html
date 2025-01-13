@@ -11,16 +11,16 @@
   </head>
   <body>
     <div class="content">
-      <h1 id="title">Kaleidoscope Spotify Music Player</h1>
       <div class="search-container">
+        <h1 id="title">Kaleidoscope Spotify Music Player</h1>
         <div class="search-bar">
           <button class="search btn"><i class="fas fa-search"></i></button>
           <input type="text" placeholder="Search Music, Artists, & Albums" />
         </div>
       </div>
 
-      <div class="player-container">
-        <div class="music-player">
+        <div class="animation-container">
+          <div class="song-holder">
           <div class="album-art">
             <img src="placeholder.jpg" alt="Album Art" />
           </div>
@@ -28,6 +28,11 @@
             <h2>Song Title</h2>
             <p>Artist Name</p>
           </div>
+          </div>
+          <div class="animation-rendering-box"></div>
+
+        </div>
+        <div class="music-player">
           <div class="controls">
             <button id="random">
               <i class="btn fas fa-random"></i>
@@ -52,7 +57,6 @@
             <span id="end-time">4:20</span>
           </div>
         </div>
-      </div>
     </div>
   </body>
   <script src="src/main.js" type="module"></script>

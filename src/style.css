@@ -37,19 +37,32 @@ h1 {
 }
 
 .content {
-  display: flex;
+  display: grid;
+  grid-template-rows: 15% 70% 15%;
+  position: relative;
   flex-direction: column;
   align-items: center;
   align-content: center;
+  justify-items: center;
   gap: 2em;
   min-height: 100vh;
   min-width: 100vw;
   background-color: #191414;
 }
 
+.search-container {
+  background-color: #646cff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
 .search-bar {
   display: flex;
-  width: 50ch;
+  width: 50%;
   padding: 3px;
   height: 50px;
   font-size: 1.5em;
@@ -95,11 +108,48 @@ h1 {
   border: none;
 }
 
-.player-container {
+.animation-container {
   display: flex;
   position: relative;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+  background-color: transparent;
+}
+.song-holder {
+  position: absolute;
+  background-color:#535bf2;
+  border-radius: 20px;
   bottom: 0;
-  padding: 5em;
+  left: 0;
+}
+.album-art {
+  width: 104.29px;
+  height: 104.29px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 20px 20px 0 0 ;
+
+}
+.song-details {
+  text-align: center;
+  font-size: 10px;
+}
+.animation-rendering-box {
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  border-radius: 20px;
+}
+.music-player {
+  flex: 0 0 25%;
+  width: 70%;
+  background-color: turquoise;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  bottom: auto;
 }
 
 .timer-container {
@@ -137,18 +187,7 @@ h1 {
   font-size: 1em;
 }
 
-.music-player {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1em;
-}
 
-.song-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 #title {
   display: flex;
