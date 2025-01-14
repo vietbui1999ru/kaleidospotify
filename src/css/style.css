@@ -52,10 +52,10 @@ h1 {
 
 .search-container {
   background-color: #646cff;
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
-
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -63,13 +63,12 @@ h1 {
 .search-bar {
   display: flex;
   width: 50%;
-  padding: 3px;
   height: 50px;
   font-size: 1.5em;
   border: 2px solid #ffffff;
   border-radius: 45px;
   outline: none;
-  box-shadow: 0 0 5px #ffffff;
+  margin-bottom: 10px;
 }
 
 .search-bar input {
@@ -100,11 +99,9 @@ h1 {
   justify-content: center;
   text-align: center;
   cursor: pointer;
-  left: 10;
   align-items: center;
   line-height: 1;
   font-size: 20px;
-  vertical-align: middle;
   border: none;
 }
 
@@ -112,13 +109,14 @@ h1 {
   display: flex;
   position: relative;
   align-items: center;
+  margin-top: 40px;
   width: 80%;
   height: 100%;
   background-color: transparent;
 }
 .song-holder {
   position: absolute;
-  background-color:#535bf2;
+  background-color: #535bf2;
   border-radius: 20px;
   bottom: 0;
   left: 0;
@@ -128,8 +126,7 @@ h1 {
   height: 104.29px;
   text-align: center;
   background-color: #f9f9f9;
-  border-radius: 20px 20px 0 0 ;
-
+  border-radius: 20px 20px 0 0;
 }
 .song-details {
   text-align: center;
@@ -143,8 +140,8 @@ h1 {
 }
 .music-player {
   flex: 0 0 25%;
-  width: 70%;
-  background-color: turquoise;
+  width: 100%;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -171,7 +168,7 @@ h1 {
   position: relative;
   margin-left: 6px;
   margin-right: 6px;
-  width: 80%;
+  width: 40%;
   border-radius: 15px;
   background-color: #ffffff;
 }
@@ -186,8 +183,6 @@ h1 {
   color: #ffffff;
   font-size: 1em;
 }
-
-
 
 #title {
   display: flex;
