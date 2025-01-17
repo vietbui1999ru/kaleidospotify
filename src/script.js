@@ -3,7 +3,10 @@ import {
   getAccessToken,
   fetchProfile,
   fetchMusic,
-} from "../auth/codeGenerator.js";
+} from "../src/auth/codeGenerator.js";
+
+import { Song } from "../src/song/song.js";
+import { convertMillisecondsToMinutes } from "../src/helpers/helpers.js";
 
 export async function authenticate(clientId, code) {
   if (!code) {
@@ -41,6 +44,21 @@ function populateUI(profile) {
 function populateMusicPlayer(song) {
   const songTitle = song.name;
   const songArtist = song.artists[0].name;
-  const albumImg = song.album.images[0].url;
-  console.log("Title: ", songTitle, "\nArtist: ", songArtist, "\nImageUrl: ", albumImg)
+  const albumImg = song.album.images[2].url;
+  const albumImgArray = song.album.images;
+  const duration = convertMillisecondsToMinutes(song.duration_ms);
+
+  const songDetails = new Song(songTitle, songArtist, albumImg, duration);
+  songDetails.renderToHtml();
+  console.log(albumImgArray);
+  console.log(
+    "Title: ",
+    songTitle,
+    "\nArtist: ",
+    songArtist,
+    "\nImageUrl: ",
+    albumImg,
+    "\nDuration: ",
+    duration,
+  );
 }

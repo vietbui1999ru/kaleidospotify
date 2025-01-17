@@ -160,6 +160,7 @@ h1 {
   align-content: center;
   position: relative;
   cursor: pointer;
+  margin-bottom: 12px;
 }
 
 .progress-bar {
