@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -119,18 +122,26 @@ h1 {
   background-color: #535bf2;
   border-radius: 20px;
   bottom: 0;
-  left: 0;
+  justify-content: center;
+  justify-items: center;
+  width: 200px;
+  height: 300px;
 }
 .album-art {
-  width: 104.29px;
-  height: 104.29px;
+  width: 64px;
+  height: 64px;
   text-align: center;
   background-color: #f9f9f9;
   border-radius: 20px 20px 0 0;
 }
+
+img.resize {
+    background-size: cover;
+    height: auto;
+}
 .song-details {
   text-align: center;
-  font-size: 10px;
+  font-size: 20px;
 }
 .animation-rendering-box {
   width: 100%;

@@ -6,7 +6,7 @@ import {
 } from "../src/auth/codeGenerator.js";
 
 import { Song } from "../src/song/song.js";
-import { convertMillisecondsToMinutes } from "../src/helpers/helpers.js";
+import { convertMillisecondsToMinutes , resizeImage} from "../src/helpers/helpers.js";
 
 export async function authenticate(clientId, code) {
   if (!code) {
@@ -45,6 +45,10 @@ function populateMusicPlayer(song) {
   const songTitle = song.name;
   const songArtist = song.artists[0].name;
   const albumImg = song.album.images[2].url;
+  // var img = new Image();
+  // img.src = albumImg
+  // img.crossOrigin = "anonymous";
+  // var getImg = img.onload = resizeImage(img);
   const albumImgArray = song.album.images;
   const duration = convertMillisecondsToMinutes(song.duration_ms);
 

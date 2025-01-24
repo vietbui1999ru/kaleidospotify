@@ -1,6 +1,6 @@
 export class Song {
   constructor(title, artist, albumUrl, duration) {
-    this.name = title;
+    this.title = title;
     this.artist = artist;
     this.albumUrl = albumUrl;
     this.duration = duration;
